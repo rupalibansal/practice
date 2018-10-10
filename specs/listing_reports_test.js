@@ -6,8 +6,6 @@ let currentUser = require('../elements/currentUser_page.js');
 let listingReports = require('../elements/listing_reports_page.js');
 
 
-
-
 //login as an agent:
 describe('Rate My Agent Test Cases', () => {
     it('Should be able to login as Agent',  () => {

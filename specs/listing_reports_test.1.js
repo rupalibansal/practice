@@ -5,7 +5,7 @@ let loginElements = require('../elements/login_page.js');
 let currentUser = require('../elements/currentUser_page.js');
 let listingReports = require('../elements/listing_reports_page.js');
 
-describe('Rate My Agent Test Cases', () => {
+fdescribe('Rate My Agent Test Cases', () => {
     it('Should be able to create a listing report', () => {
         //open the browser
 

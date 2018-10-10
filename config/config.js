@@ -8,7 +8,7 @@ This line tells Protractor the location of test files spec.js*/
 
 exports.config = {
     seleniumAddress: 'http://localhost:4444/wd/hub',
-    specs: ["../specs/listing_reports_test.js"],
+    specs: ["../specs/*.js"],
     onPrepare: function() {
       browser.manage().window().setSize(1500, 1000);
     }

@@ -25,7 +25,6 @@ describe('rma tests', () => {
 
         element(by.repeater('match in matches track by $index').row(3)).click();
 
-
         browser.sleep(8000);
     });
 });
