@@ -1,16 +1,4 @@
-//Steps to be followed:
-//1.Login As an Agent
-//2.Click on Janna(Pic)
-//3.Click on Review
-//4.Click on Completed Review
-//5.Click on Promote Button
-//6.Select the Template2
-//7.Click on the Next Button
-//8. Enter the amount in the textbix as $200.
-//9 Get the value of Estimated Ad views.
-//10.Make the duration as 3 weeks.
-//11. Click on the next button.
-//12.Agree terms and condition.
+
 
 let url = require('../data/setup.json');
 let testUser = require('../data/testUsers.json');
@@ -26,32 +14,32 @@ describe('Rate My Agent Test Cases', () => {
     it('Should be able to login as an Agent', async () => {
         //browser.driver.manage().window().maximize();
         browser.ignoreSynchronization = true;
-        // Open the browser:
+
         commonMthd.openBrowser(url.baseURL);
-        // wait for the element to load and login:
+  
         commonMthd.waitForElem(loginElements.objects.loginbtn);
         commonMthd.login(testUser.email, testUser.password);
-        // Click on the janna(Image)
+    
         var user = currentUser.objects.currentUserName.first();
         commonMthd.waitForElem(user);
         user.click();
-        //3. Click on the Reviews
+
         reviewsPage.objects.reviews_icon.click();
-        // Wait and click on the completed Reviews:
+       
         commonMthd.waitForElem(reviewsPage.objects.completedReview);
         reviewsPage.objects.completedReview.click();
-        // Wait and click on the Promote button:
+    
         commonMthd.waitForElem(reviewsPage.objects.promoteBtn);
         reviewsPage.objects.promoteBtn.click();
-        // Wait and select the template 2:
+    
         commonMthd.waitForElem(reviewsPage.objects.templateSelect);
         reviewsPage.objects.templateSelect.click();
-        //7. Click on the Next Button:
+    
         reviewsPage.objects.nextBtn.click();
         // 8Enter the amount as$200
         reviewsPage.objects.txtBox.clear();
         reviewsPage.objects.txtBox.sendKeys(testData.promoteReview.amount);
-        //9 Get the value:
+
         let value = reviewsPage.objects.valueLabel;
         value.getText().then(function (text) {
             console.log("The estimated Ad Views is :", text);
