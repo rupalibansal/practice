@@ -1,6 +1,6 @@
 // JASMINE: jasmine is a behaviour driven development (BDD) framework for testing the javascript code:
 // BDD means the test cases are written in easy understandable language 
-//Expectations are built with the function expect which takes a value, called the actual. It is chained with a Matcher function, which takes the expected value.
+//Expectations are built with the function expect which takes a value, called the actual. It is chained with a Matcher function, which takes the expectd value.
 
 
 describe('Assertions Suite', () => {
