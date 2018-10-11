@@ -14,7 +14,7 @@ describe('rma tests', () => {
         commonMethods.openBrowser(url.baseURL);
         // Login ------
         commonMethods.login(testUsers.email, testUsers.password);
-        //2 Click on janna
+    
         element.all(by.binding('currentUser.name')).first().click();
 
         // 3 Click on the Edit Profile:
